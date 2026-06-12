@@ -1,12 +1,12 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 vim.o.number = true
 vim.o.relativenumber = true
-vim.o.mouse = 'a'
+vim.o.mouse = "a"
 vim.o.showmode = false
 vim.o.termguicolors = true
-vim.o.signcolumn = 'yes'
+vim.o.signcolumn = "yes"
 vim.o.cursorline = true
 
 vim.o.tabstop = 2
@@ -24,5 +24,5 @@ vim.o.splitright = true
 vim.o.splitbelow = true
 
 vim.schedule(function()
-  vim.o.clipboard = 'unnamedplus'
+  vim.o.clipboard = "unnamedplus"
 end)
