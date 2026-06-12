@@ -69,7 +69,7 @@ GitHub Copilot also requires a subscription and `:Copilot setup`.
 ## Install
 
 ```sh
-git clone https://github.com/<github-user>/dotfiles.git ~/dotfiles
+git clone https://github.com/Hiyabye/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ./install.sh
 ```
