@@ -22,7 +22,6 @@ Generated data, plugins, caches, and credentials stay outside Git.
 |-- ghostty/
 |   |-- config.ghostty          # Terminal settings
 |   `-- shaders/
-|       |-- README.md           # Shader source and license
 |       `-- cursor_warp.glsl    # Active cursor shader
 |-- nvim/
 |   |-- init.lua                # Loads core config, plugins, local overrides
@@ -89,6 +88,16 @@ Keep machine-specific paths, experiments, and secrets out of Git.
 
 Both files are optional, loaded automatically, and ignored by Git.
 
+## Cursor Shader
+
+`ghostty/shaders/cursor_warp.glsl` provides the cursor trail enabled in
+`ghostty/config.ghostty`.
+
+Source:
+[sahaj-b/ghostty-cursor-shaders](https://github.com/sahaj-b/ghostty-cursor-shaders)
+
+Upstream license: MIT
+
 ## Maintenance
 
 - Change existing behavior in its functional plugin group.
@@ -97,6 +106,3 @@ Both files are optional, loaded automatically, and ignored by Git.
 - Keep `nvim/lazy-lock.json` committed for reproducible plugin versions.
 - Review with `git diff`, then stage intentionally with `git add`.
 - Never commit API keys, access tokens, private keys, or machine credentials.
-
-Cursor shader comes from
-[sahaj-b/ghostty-cursor-shaders](https://github.com/sahaj-b/ghostty-cursor-shaders).
