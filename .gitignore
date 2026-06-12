@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Editor temporary files
+*.sw?
+*~
+
+# Runtime logs
+*.log
+
+# Machine-local overrides
+/ghostty/local.ghostty
+/nvim/lua/config/local.lua

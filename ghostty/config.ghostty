@@ -1,0 +1,33 @@
+# Basics
+language = en
+theme = Catppuccin Mocha
+
+# Typography
+font-family = Fira Code
+font-size = 16
+
+# Korean fallback
+font-codepoint-map = "U+1100-U+11FF,U+3130-U+318F,U+A960-U+A97F,U+AC00-U+D7AF,U+D7B0-U+D7FF=D2Coding"
+
+# Window
+window-decoration = true
+window-save-state = never
+maximize = true
+quit-after-last-window-closed = true
+
+# Custom shader
+custom-shader = shaders/cursor_warp.glsl
+
+# Background
+background-opacity = 0.80
+background-blur-radius = 20
+
+# Cursor
+cursor-style = bar
+cursor-style-blink = true
+
+# Input
+mouse-hide-while-typing = true
+
+# Optional machine-specific settings
+config-file = ?local.ghostty
