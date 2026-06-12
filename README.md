@@ -33,16 +33,12 @@ Generated data, plugins, caches, and credentials stay outside Git.
 |       |   |-- keymaps.lua     # Global key mappings
 |       |   |-- lazy.lua        # Plugin manager bootstrap
 |       |   `-- options.lua     # Core editor options
-|       `-- plugins/            # One plugin or feature per file
-|           |-- colorscheme.lua
-|           |-- completion.lua
-|           |-- copilot.lua
-|           |-- format.lua
-|           |-- jungol.lua      # Personal Jungol plugin
-|           |-- lsp.lua
-|           |-- telescope.lua
-|           |-- treesitter.lua
-|           `-- which-key.lua
+|       `-- plugins/            # Plugins grouped by functionality
+|           |-- ai.lua          # AI-assisted tools
+|           |-- coding.lua      # Completion, LSP, formatting, and syntax
+|           |-- ui.lua          # Theme, navigation, and interface helpers
+|           `-- custom/
+|               `-- jungol.lua  # Personal Jungol workflow
 |-- .editorconfig               # Basic formatting rules
 |-- .gitignore                  # Local and generated files
 `-- install.sh                  # Creates configuration symlinks
@@ -95,8 +91,9 @@ Both files are optional, loaded automatically, and ignored by Git.
 
 ## Maintenance
 
-- Change existing behavior in its current file.
-- Add each Neovim plugin in its own `lua/plugins/<name>.lua` file.
+- Change existing behavior in its functional plugin group.
+- Add Neovim plugins to the appropriate `lua/plugins/<function>.lua` file.
+- Keep personal plugins in separate files under `lua/plugins/custom/`.
 - Keep `nvim/lazy-lock.json` committed for reproducible plugin versions.
 - Review with `git diff`, then stage intentionally with `git add`.
 - Never commit API keys, access tokens, private keys, or machine credentials.

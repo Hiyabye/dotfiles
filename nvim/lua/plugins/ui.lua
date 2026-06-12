@@ -1,5 +1,14 @@
 return {
   {
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    priority = 1000,
+    config = function()
+      vim.cmd.colorscheme 'catppuccin-mocha'
+    end,
+  },
+
+  {
     'nvim-telescope/telescope.nvim',
     event = 'VimEnter',
     dependencies = {
@@ -25,5 +34,11 @@ return {
       vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = 'Search buffers' })
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = 'Search help' })
     end,
+  },
+
+  {
+    'folke/which-key.nvim',
+    event = 'VimEnter',
+    opts = {},
   },
 }
