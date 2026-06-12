@@ -22,7 +22,7 @@ Generated data, plugins, caches, and credentials stay outside Git.
 |-- ghostty/
 |   |-- config.ghostty          # Terminal settings
 |   `-- shaders/
-|       `-- cursor_warp.glsl    # Active cursor shader
+|       `-- cursor.glsl         # Active cursor shader
 |-- nvim/
 |   |-- init.lua                # Loads core config, plugins, local overrides
 |   |-- lazy-lock.json          # Pinned plugin versions
@@ -90,7 +90,7 @@ Both files are optional, loaded automatically, and ignored by Git.
 
 ## Cursor Shader
 
-`ghostty/shaders/cursor_warp.glsl` provides the cursor trail enabled in
+`ghostty/shaders/cursor.glsl` provides the cursor trail enabled in
 `ghostty/config.ghostty`.
 
 Source:
