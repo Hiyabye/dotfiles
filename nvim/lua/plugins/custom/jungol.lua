@@ -1,6 +1,6 @@
 return {
   {
-    "jungol-local",
+    "jungol",
     dir = vim.fn.stdpath "config",
     lazy = false,
     config = function()
