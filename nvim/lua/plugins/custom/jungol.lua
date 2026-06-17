@@ -1,7 +1,7 @@
 return {
   {
     "jungol",
-    dir = vim.fn.stdpath "config",
+    dir = vim.fn.stdpath("config"),
     lazy = false,
     config = function()
       local function setup_jungol_problem(problem_number)
@@ -16,7 +16,7 @@ return {
         local folder_name = string.format("%02dxxx", prefix)
         local file_name = string.format("%05d.cpp", num)
 
-        local base_dir = vim.fn.expand "~/Code/Jungol"
+        local base_dir = vim.fn.expand("~/Code/Jungol")
         local full_dir = base_dir .. "/" .. folder_name
         local full_path = full_dir .. "/" .. file_name
 
@@ -48,7 +48,7 @@ return {
 
           vim.api.nvim_buf_set_lines(0, 0, -1, false, template)
           vim.api.nvim_win_set_cursor(0, { 5, 2 })
-          vim.cmd "startinsert!"
+          vim.cmd("startinsert!")
         end
       end
 
