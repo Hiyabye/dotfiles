@@ -2,7 +2,6 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      -- Lua language server configuration.
       vim.lsp.config("lua_ls", {
         settings = {
           Lua = {
