@@ -1,13 +1,10 @@
 # Basics
 language = en
-theme = Catppuccin Mocha
+theme = "Catppuccin Mocha"
 
 # Typography
-font-family = Fira Code
+font-family = "JetBrainsMono Nerd Font"
 font-size = 16
-
-# Korean fallback
-font-codepoint-map = "U+1100-U+11FF,U+3130-U+318F,U+A960-U+A97F,U+AC00-U+D7AF,U+D7B0-U+D7FF=D2Coding"
 
 # Window
 window-decoration = true
@@ -16,11 +13,11 @@ maximize = true
 quit-after-last-window-closed = true
 
 # Custom shader
-custom-shader = shaders/cursor.glsl
+custom-shader = shaders/cursor_warp.glsl
 
 # Background
-background-opacity = 0.80
-background-blur-radius = 20
+background-opacity = 0.95
+background-blur = true
 
 # Cursor
 cursor-style = bar
@@ -28,6 +25,3 @@ cursor-style-blink = true
 
 # Input
 mouse-hide-while-typing = true
-
-# Optional machine-specific settings
-config-file = ?local.ghostty
