@@ -24,6 +24,9 @@ vim.o.updatetime = 250
 vim.o.timeoutlen = 300
 vim.o.mouse = "a"
 
+-- Arrow keys wrap at line edges (VSCode-style)
+vim.o.whichwrap = "h,l,<,>,[,]"
+
 -- Search
 vim.o.ignorecase = true
 vim.o.smartcase = true
