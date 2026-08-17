@@ -1,0 +1,14 @@
+-- Copy this file to local.lua and adjust it for the current machine.
+return {
+  monitor = {
+    output = "DP-2",
+    mode = "2560x1440@165",
+    position = "0x0",
+    scale = 1,
+    bitdepth = 10,
+    cm = "auto",
+  },
+  drm_devices = "/dev/dri/card1:/dev/dri/card2",
+  nvidia = true,
+  start_mail_sync = false,
+}

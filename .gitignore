@@ -1,2 +1,11 @@
+# Machine-local configuration and credentials
 /ghostty/local.ghostty
+/hypr/local.lua
+/mbsync/mbsyncrc
 /nvim/lua/config/local.lua
+
+# Editor and operating-system files
+.DS_Store
+*.swp
+*.swo
+*~

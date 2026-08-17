@@ -14,6 +14,7 @@ quit-after-last-window-closed = true
 
 # Custom shader
 custom-shader = shaders/cursor_warp.glsl
+custom-shader-animation = always
 
 # Background
 background-opacity = 0.95
@@ -25,3 +26,6 @@ cursor-style-blink = true
 
 # Input
 mouse-hide-while-typing = true
+
+# Optional machine-local overrides (ignored by Git)
+config-file = ?local.ghostty
