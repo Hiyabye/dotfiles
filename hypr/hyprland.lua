@@ -28,6 +28,9 @@ hl.on("hyprland.start", function()
     hl.exec_cmd(command)
   end
 
+  hl.exec_cmd("dbus-update-activation-environment --systemd $WAYLAND_DISPLAY $XDG_CURRENT_DESKTOP")
+  hl.exec_cmd("gnome-keyring-daemon --start --components=secrets")
+
   if machine.start_mail_sync then
     hl.exec_cmd("command -v mail-sync >/dev/null 2>&1 && mail-sync")
   end

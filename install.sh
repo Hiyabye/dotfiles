@@ -15,10 +15,31 @@ usage() {
   cat <<'EOF'
 Usage: ./install.sh [--force]
 
-Create symlinks from this repository into the current user's configuration
-folders. Existing files are skipped by default. With --force, conflicts are
-moved to timestamped backup paths before links are created.
+Install the Arch Linux packages used by each configuration, then create
+symlinks from this repository into the current user's configuration folders.
+Existing files are skipped by default. With --force, conflicts are moved to
+timestamped backup paths before links are created.
 EOF
+}
+
+install_arch_packages() {
+  local component="$1"
+  shift
+
+  if ! command -v pacman >/dev/null 2>&1; then
+    printf 'error: pacman is required to install packages for %s\n' "$component" >&2
+    exit 1
+  fi
+
+  printf '\nInstalling packages for %s...\n' "$component"
+  if ((EUID == 0)); then
+    pacman -S --needed "$@"
+  elif command -v sudo >/dev/null 2>&1; then
+    sudo pacman -S --needed "$@"
+  else
+    printf 'error: sudo is required to install packages for %s\n' "$component" >&2
+    exit 1
+  fi
 }
 
 safe_link() {
@@ -75,6 +96,14 @@ while (($# > 0)); do
   esac
   shift
 done
+
+install_arch_packages fastfetch fastfetch
+install_arch_packages ghostty ghostty ttf-jetbrains-mono-nerd
+install_arch_packages hypr \
+  brightnessctl gnome-keyring hyprland hyprlauncher hyprpaper \
+  hyprpolkitagent mako playerctl thunar waybar wireplumber
+install_arch_packages nvim base-devel fd git neovim ripgrep
+install_arch_packages mbsync isync libsecret
 
 safe_link "$dotfiles_dir/fastfetch" "$config_home/fastfetch"
 safe_link "$dotfiles_dir/ghostty" "$config_home/ghostty"
